@@ -91,6 +91,7 @@
 	}
 
 	return {
+		generar: generador,
 		h: generador,
 	};
 });

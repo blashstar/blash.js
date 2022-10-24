@@ -43,6 +43,7 @@
 	}
 
 	return {
+		agregar: generador,
 		c: generador,
 	};
 });
