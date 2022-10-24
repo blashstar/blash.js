@@ -18,7 +18,7 @@
 		// Navegador
 		raiz[nombre] = constructor(document);
 	}
-})("html", typeof self !== "undefined" ? self : this, function () {
+})("css", typeof self !== "undefined" ? self : this, function () {
 	const ID = "blash-css";
 
 	function generador(selector, reglas) {
