@@ -7,18 +7,18 @@
 	}
 	if (typeof exports === "object") {
 		if (typeof module === "object") {
-			module.exports = constructor();
+			module.exports = constructor(raiz);
 		} else if (typeof exports.nodeName !== "string") {
 			// CommonJS
 			constructor(exports);
 		} else {
-			exports[nombre] = constructor();
+			exports[nombre] = constructor(raiz);
 		}
 	} else {
 		// Navegador
-		raiz[nombre] = constructor();
+		raiz[nombre] = constructor(raiz);
 	}
-})("html", typeof self !== "undefined" ? self : this, function () {
+})("html", typeof self !== "undefined" ? self : this, function (raiz) {
 	function generador(nodo = "", contenido, atributos, eventos) {
 		const dom = raiz.document;
 		let cadena = nodo ?? "";
