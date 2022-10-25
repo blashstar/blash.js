@@ -27,15 +27,14 @@
 
 		let r = [];
 		for (const p in reglas) {
-			r.push(`${p}:${reglas[p]}`);
+			r.push(`${p}:${reglas[p]};`);
 		}
-		const propiedades = r.join(";");
+		const propiedades = r.join("");
 
 		estilo.sheet.insertRule(`${selector}{${propiedades}}`);
 	}
 
 	function crearEstilo() {
-		console.log("creando ", ID);
 		const estilo = document.createElement("style");
 		estilo.type = "text/css";
 		estilo.id = ID;
